@@ -1,5 +1,5 @@
 # Phishkit
-# logme.py — Phishing Simulation Toolkit
+# phishkit.py — Phishing Simulation Toolkit
 
 A lightweight, self-contained credential-capture and IP-logging tool built for
 **authorized** penetration testing, red-team engagements, and security
