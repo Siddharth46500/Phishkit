@@ -41,6 +41,9 @@ IP address, User-Agent, and timestamp.
 Requires **Python 3.6+** (no third-party packages needed).
 
 ```bash
+sudo su
 git clone https://github.com/siddharth46500/phishkit.git
 cd phishkit
-mkdir -p site
+mkdir -p site #optional
+python phishkit.py
+
